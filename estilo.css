@@ -1,6 +1,11 @@
+*{margin: 0; padding: 0;}
+
 /* imagem do curriculo*/
 
-img {
+#foto {
+	border: solid 5px  rgb(46, 51, 68, 1);
+	margin: 10px;
+	/*clear: both;*/
 	width: 200px;
 }
 
@@ -11,21 +16,23 @@ th {
 }
 
 td, th {
-	border: 1px solid #dddddd;
+	border: 1px solid  #dddddd;
 	text-align: left;
-	padding: 8px;
+	margin: 10px;
+	padding: 15px;
 }
 
-/*Titulo*/
+/*Titulo
 
 h1 {
 	font-size: 30px;
-}
+}*/
 
 /*tamanho da fonte em todo o site*/
 
 body {
 	font-size: 12px;
+	background-color: #E6E6E6;
 }
 
 /*Formulário - inicio  350px formulario  label 150px  input 100px*/
@@ -84,58 +91,120 @@ input[type="submit"]:active{
 }
 /*fim - Botão */
 
-/* Menu de Navegação*/
+/* Cabeçalho e corpo */
+
+/*#cabeçalho{
+    
+}*/
+
+#corpo{
+	padding: 10px;
+}
+/* centralizar o site */
+
+#conteiner {
+	width: 85%;
+	margin: 0 auto;
+	background: #fff;
+	min-width: 720px;
+	max-width: 1280px;
+}
+
+/* Menu de Navegação e Menu Redes Sociais Dropdown */
+#nave{
+	background-color: rgb(46, 51, 68, 1);
+	text-align: center;
+	position: relative;
+	font-family: monospace;
+	float: right;
+	height: 150px;
+	width: 100%;
+}
+
 .menu {
-	list-style-type: none;
-	margin: 5px 0px;
-	padding: 0;
-	overflow: hidden;
-	background: lightgray;
-	width: 35%;	
+	margin: 75px 20px 0px 250px ;
+	padding: 10px 5px 5px 145px;
+	list-style: none;
+	width: 720px;
+	float: left;
 }
 
 .menu li {
+	background-color: rgb(46, 51, 68, 1);
+	display: block;
 	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.5s;
 }
 
 .menu li a {
-	display: block;
-	text-align: center;
-	color: #61696f;/*#fbfbfc;*/
-	padding: 14px 16px;
+	color: #ccc;
 	text-decoration: none;
 }
 
-.menu li a:hover {
-	color: #fbfbfc;
-	background: #0B0B61;
+.drop {
+	visibility: hidden;
+	opacity: 0;
+	min-width: 5rem;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-top: 1rem;
+	left: 0;
+	display: none;
+	box-shadow: 0px 8px 16px rgb(0,0,0,0.2);
 }
+
+.drop li{
+	clear: both;
+	width: 100%;
+}
+
+.drop a img {
+	border-radius: 15px;
+	width: 25px;
+	display: block;
+	padding: 5px  5px 5px 25px;
+	margin: 0;
+}
+
+.menu li:hover, .drop li:focus-within{
+	background-color: #010103;
+	cursor: pointer;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.menu a:hover{
+	color: #ccc;
+}
+
+.menu li:hover> .drop,
+.menu li:focus-within>.drop,
+.menu li .drop:hover,
+.menu li .drop:focus{
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
 /*fim menu*/
 
-/* Menu Redes Sociais*/
-.logo {
-	width: 35%;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	text-decoration: none;
+
+/* Meus Projetos*/
+
+#projetos{
+	margin: 5px;
+	padding:  20px;
 }
 
-.logo li {
-	float: left;
+h2{
+	padding: 5px;
 }
 
-.logo  a img {
-	border-radius: 15px;
-	width: 35px;
-	display: block;
-	padding: 9px  16px;
-	margin: 0;
-}
+/* fim meus projetos*/
 
-.logo li img:hover{
-	background: #4242d19f;
-}
 
-/*fim do logo*/
+
+
