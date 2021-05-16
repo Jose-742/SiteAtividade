@@ -1,15 +1,138 @@
-*{margin: 0; padding: 0;}
-
-/* imagem do curriculo*/
-
-#foto {
-	border: solid 5px  rgb(46, 51, 68, 1);
-	margin: 10px;
-	/*clear: both;*/
-	width: 200px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/* tabela da pagina inicio */
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  background: black url("imagen/fundo.jpg");
+  margin: 0;
+}
+
+.cabecalho {
+
+  background-color: rgba(46, 51, 68, 1);
+  float: left;
+  padding: 7.5% 5% 0% 10%;
+  width: 85%;
+}
+
+/*MENUS*/
+
+#nave {
+  text-align: center;
+  position: relative;
+  font-family: monospace;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  float: left;
+  width: 18%;
+}
+
+.menu li a {
+  display: block;
+  color: #cccccc;
+  text-shadow: 1px 1px 3px rgb(30, 2, 68);
+  padding: 7.5%;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*MENU DROP*/
+.drop {
+  background-color: rgba(46, 51, 68, 1);
+  visibility: hidden;
+  list-style: none;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  width: 18%;
+  display: block;
+  box-shadow: 0px 8px 16px rgb(0, 0, 0, 0.2);
+}
+
+.drop li {
+  margin: 0;
+  float: left;
+  width: 100%;
+}
+
+.drop a img {
+  border-radius: 15px;
+  width: 25px;
+  display: block;
+  padding: 5px 5px 5px 25px;
+  margin: 0;
+}
+
+.menu li a:hover, .drop li:focus-within {
+  background-color: #010103;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #ccc;
+}
+
+.menu li:hover>.drop, .menu li:focus-within>.drop, .menu li .drop:hover, .menu li .drop:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+/*FIM DOS MENUS*/
+
+/*CORPO DO SITE*/
+
+#corpo {
+  background: white;
+  width: 50%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+#postagem1 {
+  width: 100%;
+}
+
+#postagem1 img {
+  width: 100%;
+}
+
+article {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 15px;
+}
+
+h2 {
+  padding: 15px;
+}
+
+#postagem2 {
+  width: 100%;
+}
+
+#postagem2 img {
+  width: 100%;
+}
+
+
+/* tabela da pagina grade curricular */
+#tabela{
+  padding: 10%;
+  margin-bottom: 20%;
+}
+
 
 th {
 	background-color: #dddddd;
@@ -22,31 +145,36 @@ td, th {
 	padding: 15px;
 }
 
-/*Titulo
-
-h1 {
-	font-size: 30px;
-}*/
-
-/*tamanho da fonte em todo o site*/
-
-body {
-	font-size: 12px;
-	background-color: #E6E6E6;
+.hh2{
+  clear: both;
+  padding: 30px;
+  text-align: center;
 }
 
-/*Formulário - inicio  350px formulario  label 150px  input 100px*/
+/*Projetos */
+
+#projetos{
+  padding: 10%;
+  margin-bottom: 45%;
+}
+
+/*Contato Formulário*/
+
 
 form {
+  border: 1px solid grey;
 	margin: 0 auto;
-	width: 350px;
+	width: 90%;
 	padding: 1em;
+  padding-bottom: 45%;
 	border-radius: 1em;
 }
 
 form li {
+  
 	display: inline-block;
-	width: 150px;
+	width:  35%;
+  padding: 5%;
 	padding-bottom: 3px;
 }
 
@@ -57,13 +185,13 @@ form ul {
 }
 
 label {
-	width: 150px;
+	width: 35%;
 	text-align: right;
 }
 
 input[type="text"], textarea {
 	font: 1em sans-serif;
-	width: 100px;
+	width: 100% ;
 }
 /*fim - formulário*/
 
@@ -71,7 +199,8 @@ input[type="text"], textarea {
 input[type="submit"] {
 	border: none;
 	border-radius: 15px;
-	padding: 9px 13px;
+	padding: 2% 3%;
+  margin: 5%;
 	outline: none;
 	background-color: #2161b9;
 	color:#EFF5FB;
@@ -91,120 +220,178 @@ input[type="submit"]:active{
 }
 /*fim - Botão */
 
-/* Cabeçalho e corpo */
+/*RODAPE*/
 
-/*#cabeçalho{
-    
-}*/
-
-#corpo{
-	padding: 10px;
-}
-/* centralizar o site */
-
-#conteiner {
-	width: 85%;
-	margin: 0 auto;
-	background: #fff;
-	min-width: 720px;
-	max-width: 1280px;
+footer {
+  clear: both;
+  padding: 0.5%;
+  text-align: center;
+  background-color: rgba(46, 51, 68, 1);
+  color: #ccc;
+  font-family: monospace;
 }
 
-/* Menu de Navegação e Menu Redes Sociais Dropdown */
-#nave{
-	background-color: rgb(46, 51, 68, 1);
-	text-align: center;
-	position: relative;
-	font-family: monospace;
-	float: right;
-	height: 150px;
-	width: 100%;
+@media screen and (min-width: 481px) and (max-width: 900px) { /* Tamanho medio*/
+  .cabecalho {
+    background-color: rgba(46, 51, 68, 1);
+    float: left;
+    padding: 0;
+    width: 100%;
+  }
+  .menu li {
+    float: left;
+    padding: 0;
+    margin: 1%;
+    width: 45%;
+  }
+  .menu li a:hover {
+    background-color: #010103;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .drop li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+  }
+  .drop {
+    background-color: rgba(46, 51, 68, 1);
+    visibility: hidden;
+    list-style: none;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    width: 45%;
+    display: block;
+    box-shadow: 0px 8px 16px rgb(0, 0, 0, 0.2);
+  }
+
+  #postagem1 img {
+    padding: 5%;
+    width: 90%;
+  }
+
+  #postagem2 img {
+    padding: 5%;
+    width: 90%;
+  }
+
+  #corpo {
+    padding: 0;
+    width: 95%;
+  }
+  article {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    padding: 13px;
+  }
+  .hh2{
+    padding: 30px;
+    text-align: center;
+  }
+  
+  #projetos{
+    padding: 10%;
+    margin-bottom: 55%;
+  }
+
+  form {
+    width: 90%;
+  }
+  
+ 
 }
 
-.menu {
-	margin: 75px 20px 0px 250px ;
-	padding: 10px 5px 5px 145px;
-	list-style: none;
-	width: 720px;
-	float: left;
+@media screen and (max-width: 480px) {/*Tamanho menor*/
+  .cabecalho {
+    background-color: rgba(46, 51, 68, 1);
+    float: left;
+    font-size: 0.9em;
+    padding: 0;
+    width: 100%;
+  }
+  #corpo {
+    background: black url("imagen/fundo.jpg");
+    color: white ;
+    font-size: 0.9em;
+    float: left;
+    padding: 0;
+    width: 100%;
+  }
+  .menu {
+    width: 100%;
+    height: 0;
+  }
+  .menu li {
+    width: 100%
+  }
+  .menu li a {
+    text-align: left;
+  }
+  .drop {
+    background-color: rgba(46, 51, 68, 1);
+    visibility: hidden;
+    list-style: none;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    width: 100%;
+    display: block;
+    box-shadow: 0px 8px 16px rgb(0, 0, 0, 0.2);
+  }
+
+  article {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    padding: 15px;
+  }
+  footer {
+    font-size: 0.9em;
+    clear: both;
+    padding: 2%;
+    text-align: center;
+    background-color: rgba(46, 51, 68, 1);
+    color: #ccc;
+    font-family: monospace;
+  }
+
+.hh2{
+  padding: 10px;
+  margin-top: 15%;
+  text-align: center;
 }
 
-.menu li {
-	background-color: rgb(46, 51, 68, 1);
-	display: block;
-	float: left;
-	padding: 1rem;
-	position: relative;
-	text-decoration: none;
-	transition-duration: 0.5s;
+  #tabela {
+    margin-top: 70%;
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  
+  #tabela th,
+  #tabela td,
+  #tabela tr{
+    display: block;
+  }
+  #tabela th{
+    color: black;
+  }
+
+  #tabela td,
+  #tabela th{
+    height: 35px;
+  }
+
+  #projetos{
+    padding: 10%;
+    margin-bottom: 76%;
+  }
+
+  form {
+    width: 90%;
+  }
 }
-
-.menu li a {
-	color: #ccc;
-	text-decoration: none;
-}
-
-.drop {
-	visibility: hidden;
-	opacity: 0;
-	min-width: 5rem;
-	position: absolute;
-	transition: all 0.5s ease;
-	margin-top: 1rem;
-	left: 0;
-	display: none;
-	box-shadow: 0px 8px 16px rgb(0,0,0,0.2);
-}
-
-.drop li{
-	clear: both;
-	width: 100%;
-}
-
-.drop a img {
-	border-radius: 15px;
-	width: 25px;
-	display: block;
-	padding: 5px  5px 5px 25px;
-	margin: 0;
-}
-
-.menu li:hover, .drop li:focus-within{
-	background-color: #010103;
-	cursor: pointer;
-	font-weight: bold;
-	transition: 0.3s;
-}
-
-.menu a:hover{
-	color: #ccc;
-}
-
-.menu li:hover> .drop,
-.menu li:focus-within>.drop,
-.menu li .drop:hover,
-.menu li .drop:focus{
-	visibility: visible;
-	opacity: 1;
-	display: block;
-}
-
-/*fim menu*/
-
-
-/* Meus Projetos*/
-
-#projetos{
-	margin: 5px;
-	padding:  20px;
-}
-
-h2{
-	padding: 5px;
-}
-
-/* fim meus projetos*/
-
-
-
-
